@@ -3,8 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## To get the frontend running locally:
 
 ### clone this repo
+### 'npm install'
 ### 'npm start'
-### 'npm install`
 
 ## Available Scripts
 

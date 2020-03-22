@@ -1,4 +1,4 @@
-### Getting started
+## Getting started
 
 You can view a live demo over at https://reactprojects2020.github.io/retail-properties/
 

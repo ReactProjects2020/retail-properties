@@ -75,7 +75,7 @@ showResultData(){
     
     return (
         <div>
-                    <h3>Results</h3>
+                    <h4>Results</h4>
                     {this.state.resultsData.map(result => {
             return (
                 
@@ -106,7 +106,7 @@ showSavedData(){
     
     return (
         <div>
-                    <h3>Saved Properties</h3>
+                    <h4>Saved Properties</h4>
         {
             this.state.savedData.map(result => {
                 return (

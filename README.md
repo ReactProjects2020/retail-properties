@@ -1,10 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Getting started
 
-## To get the frontend running locally:
+You can view a live demo over at https://reactprojects2020.github.io/retail-properties/
+
+To get the frontend running locally:
 
 ### clone this repo
 ### 'npm install'
 ### 'npm start'
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

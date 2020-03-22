@@ -1,13 +1,12 @@
 .App {
   text-align: center;
   padding: 20px;
-  
+  background-color: #a6c2fa;
 }
 
 .App-header1 {
   text-align: left;
   padding: 20px;
-  font-size: calc(10px + 2vmin);
   color: rgb(99, 4, 4);
   background-color: #a6c2fa;
 }
@@ -63,9 +62,27 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  background-color: #a6c2fa;
 }
 
+.container footer{
+  text-align:left;
+  padding-bottom:20px;
+  font-size: 2vw 
+}
+h3{
+  width: 100%;
+  position: relative;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(99, 4, 4);
+}
+.logoImg{
+  width: 40%;
+  align-content: left
+}
 /* Make the image responsive */
 /*.container img {
   width: 100%;

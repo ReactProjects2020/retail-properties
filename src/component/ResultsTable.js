@@ -46,23 +46,12 @@ componentDidMount(){
         
     })
 }
-addProperty(id,resultToBeAdded){
+addProperty(resultToBeAdded){
     var results = this.state.resultsData;
     resultToBeAdded.show = false;
     var newObj = Object.assign({},resultToBeAdded);
-    /*for(var i =0;i<this.state.resultsData.length;i++){
-        
-            this.state.resultsData[i].show = false;
-            
-        
-    }
-    for(var i =0;i<this.state.savedData.length;i++){
-        
-            this.state.savedData[i].show = false;
-            
-        
-    }*/
-    var newCard = this.state.savedData.filter(result => result.id !== id).concat(newObj);
+    
+    var newCard = this.state.savedData.filter(result => result.id !== resultToBeAdded.id).concat(newObj);
     this.setState(prevState => {
         return {
             ...prevState,
@@ -85,8 +74,8 @@ removeProperty(id){
 showResultData(){
     
     return (
-        <div className="App-header1">
-                    <h3 style={{textAlign:"center"}}>Results</h3>
+        <div>
+                    <h3>Results</h3>
                     {this.state.resultsData.map(result => {
             return (
                 
@@ -95,7 +84,7 @@ showResultData(){
                     
                     <Card item={result} showLabel="add"  width="100%" />
                 
-                {result.show ? <button className="btn" onClick={() => this.addProperty(result.id,result)}>add</button> : null}
+                {result.show ? <button className="btn" onClick={() => this.addProperty(result)}>add</button> : null}
                     
                     
                 </Row>
@@ -116,8 +105,8 @@ showResultData(){
 showSavedData(){
     
     return (
-        <div className="App-header1">
-                    <h3 style={{textAlign:"center"}}>Saved Properties</h3>
+        <div>
+                    <h3>Saved Properties</h3>
         {
             this.state.savedData.map(result => {
                 return (
@@ -241,14 +230,7 @@ mouseEnter = (id) => {
   }
     render(){
 
-        var style = {
-            "width":"50%",
-            "float":"left"
-        }
-        var style1 = {
-            "width":"50%",
-            "float":"right"
-        }
+       
             
         return(
             <Container>

@@ -8,22 +8,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({adapter : new Adapter()});
 
-/*describe('adding property', () => {
-  it('Shallow rendering', () => {
-  const result = data.results;
-  const savedResult = data.saved;
-  const component = shallow(<ResultsTable/>);
-  const instance = component.instance();
-  var prevLength = component.state('savedData').length;
-  
-  instance.addProperty(1,result[0]);
-  instance.addProperty(1,result[1]);
-  instance.addProperty(1,result[2]);
-  var newLength = component.state('savedData').length;
-  expect(newLength - prevLength).toBe(3);
-  
-});
-});*/
+
 
 describe('adding property', () => {
   it('Shallow rendering', () => {
@@ -32,12 +17,31 @@ describe('adding property', () => {
   const component = shallow(<ResultsTable/>);
   const instance = component.instance();
   var prevLength = component.state('savedData').length;
-  console.log('prevLength :'+prevLength);
+  
  
-  instance.addProperty(1,result[0]);
-  instance.addProperty(1,result[1]);
+  instance.addProperty(result[0]);
+  instance.addProperty(result[1]);
   var newLength = component.state('savedData').length;
-  console.log('newLength : '+newLength);
+  
+  expect(newLength - prevLength).toBe(2);
+  
+});
+});
+
+describe('adding property', () => {
+  it('Shallow rendering', () => {
+  const result = data.results;
+  const savedResult = data.saved;
+  const component = shallow(<ResultsTable/>);
+  const instance = component.instance();
+  var prevLength = component.state('savedData').length;
+  
+ 
+  instance.addProperty(result[0]);
+  instance.addProperty(result[1]);
+  instance.removeProperty(1);
+  var newLength = component.state('savedData').length;
+  
   expect(newLength - prevLength).toBe(2);
   
 });
